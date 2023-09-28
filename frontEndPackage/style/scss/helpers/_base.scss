@@ -1,0 +1,22 @@
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+    @include screen; 
+}
+
+
+img {
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+}
+
+a,
+span, i{
+    display: inline-block;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+

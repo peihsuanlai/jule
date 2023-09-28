@@ -1,0 +1,233 @@
+.banner-carousel {
+    .owl-dots {
+        position: absolute;
+        transform: rotate(90deg);
+        bottom: 5%;
+        right: 0;
+        .owl-dot {
+            span {
+                width: 6px;
+                height: 6px;
+                margin: 5px 3px;
+                background: #d7dae0;
+            }
+            &.active {
+                span {
+                    background: $main;
+                }
+            }
+        }
+    }
+}
+
+.logo {
+    max-width: 70px;
+    max-height: 19px;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-size: cover;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    @include xsmall {
+        max-width: 90px;
+        max-height: 24px;
+    }
+    @include small {
+        max-width: 110px;
+        max-height: 30px;
+    }
+    @include medium {
+        max-width: 130px;
+        max-height: 35px;
+        // @include margin(20px);
+    }
+    @include large {
+        max-width: 150px;
+        max-height: 41px;
+    }
+}
+
+.navbar-nav a {
+    color: $main;
+}
+
+.menu-icon,
+.close-icon {
+    font-size: 20px;
+    color: $main;
+
+    @include xsmall {
+        font-size: 25px;
+    }
+    @include small {
+        font-size: 30px;
+    }
+    @include medium {
+        font-size: 35px;
+    }
+}
+
+.mobile-menu.show,
+.mobile-menu.collapsing {
+    width: initial;
+    max-width: initial;
+    height: 100vh;
+    background: $main;
+    .navbar-nav a {
+        color: $white;
+    }
+    .nav-item {
+        &::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $white;
+            height: 2px;
+            transition: width 0.4s;
+        }
+        &:hover::after {
+            width: 70px;
+        }
+    }
+}
+
+.nav-item {
+    &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        left: 0;
+        background-color: $main;
+        height: 2px;
+        transition: width 0.4s;
+    }
+    &:hover::after {
+        width: 100%;
+    }
+}
+
+#home-nav-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    &.bg-white {
+        background-color: $white;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: $main;
+    }
+}
+
+.news-container {
+    margin-top: -4px;
+}
+.triangle-left {
+    left: 0;
+    top: 5%;
+    border: 1px solid $main;
+    border-color: transparent transparent transparent $main;
+}
+.triangle-top {
+    top: -10%;
+    right: 10%;
+    border: 1px solid #d7dae0;
+    border-color: transparent #d7dae0 transparent transparent;
+    transform: rotate(-90deg);
+    z-index: -1;
+}
+
+.triangle-left,
+.triangle-top {
+    position: absolute;
+    z-index: -1;
+    border-width: 40px;
+    @include xsmall {
+        border-width: 50px;
+    }
+    @include small {
+        border-width: 80px;
+    }
+    @include medium {
+        border-width: 100px;
+    }
+    @include large {
+        border-width: 140px;
+    }
+    @include xlarge {
+        border-width: 180px;
+    }
+}
+
+.news-content {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 80px;
+    .title {
+        color: $main;
+        margin-top: -32px;
+    }
+    li {
+        border-bottom: 1px solid #cccccc;
+    }
+    .news-more-btn {
+        @include padding(4px, 6px);
+        padding-bottom: 8px;
+        line-height: 16px;
+        color: $white;
+        background-color: $main;
+        &:hover {
+            color: $main;
+            background-color: $white;
+            outline: 1px solid $main;
+        }
+    }
+    .arrow-icon {
+        font-size: 30px;
+    }
+    .more-btn {
+        color: $main;
+        border: 1px solid $main;  
+        overflow:hidden;
+        @include padding(12px,24px);
+        &:hover{
+            color:$white;
+        }
+        &::before{
+            content: "";
+           position: absolute;
+           top: 0;
+           left: 0;
+            width:0;
+            height: 100%;
+            background-color: $main;
+            z-index: -1;            
+        }
+        &:hover::before{
+            width: 100%;
+            transition: width 0.4s;
+        }
+    }
+}
+
+
+.about-container{
+    padding-bottom: 50%;
+    background-repeat: no-repeat;
+}
+
+
+
+
+.about-content{
+   top: 20%;
+   left: 20%;
+}
