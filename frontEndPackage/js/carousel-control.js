@@ -32,8 +32,10 @@ $(function () {
         }
     });
 
+
+    //首頁城市輪播
     $(".city-carousel").owlCarousel({
-        items: 3,
+      
         autoplay: true,
         slideTransition: "linear",
         autoplaySpeed: 6000,
@@ -41,5 +43,29 @@ $(function () {
         loop: true,
         dots: false,
         nav: false,
+        responsive:{
+            0:{
+                items:1,
+            },
+            768:{
+                items: 2,
+            },
+            1200:{
+                items: 3,
+            }
+        }
     });
+
+    //回到上面
+    $(".up-icon").click(function (e) {
+        e.preventDefault();
+        $("html,body").animate(
+          {
+            scrollTop: 0,
+          },
+          800
+        );
+      });
 });
+
+

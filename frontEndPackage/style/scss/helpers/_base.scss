@@ -1,6 +1,8 @@
 body{
     font-family: 'Noto Sans TC', sans-serif;
+    color: $dark-text;
     @include screen; 
+    
 }
 
 
