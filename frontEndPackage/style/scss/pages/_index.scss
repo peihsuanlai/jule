@@ -195,39 +195,35 @@
     }
     .more-btn {
         color: $main;
-        border: 1px solid $main;  
-        overflow:hidden;
-        @include padding(12px,24px);
-        &:hover{
-            color:$white;
+        border: 1px solid $main;
+        overflow: hidden;
+        @include padding(12px, 24px);
+        &:hover {
+            color: $white;
         }
-        &::before{
+        &::before {
             content: "";
-           position: absolute;
-           top: 0;
-           left: 0;
-            width:0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
             height: 100%;
             background-color: $main;
-            z-index: -1;            
+            z-index: -1;
         }
-        &:hover::before{
+        &:hover::before {
             width: 100%;
             transition: width 0.4s;
         }
     }
 }
 
-
-.about-container{
+.about-container {
     padding-bottom: 50%;
     background-repeat: no-repeat;
 }
 
-
-
-
-.about-content{
-   top: 20%;
-   left: 20%;
+.about-content {
+    top: 20%;
+    left: 20%;
 }
