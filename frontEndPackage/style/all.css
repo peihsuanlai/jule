@@ -872,37 +872,37 @@ footer .photonic a {
   transform: translateY(-50%) rotate(-90deg);
 }
 
-.qa-form select {
+.qa-form select, .contact-form select {
   padding: 0;
 }
-.qa-form .cerify-code-panel {
+.qa-form .cerify-code-panel, .contact-form .cerify-code-panel {
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
   justify-content: space-between;
 }
-.qa-form .cerify-code-panel .verify-code {
+.qa-form .cerify-code-panel .verify-code, .contact-form .cerify-code-panel .verify-code {
   margin-bottom: 0;
   border: 0;
   width: 35% !important;
 }
-.qa-form .cerify-code-panel .verify-code-area {
+.qa-form .cerify-code-panel .verify-code-area, .contact-form .cerify-code-panel .verify-code-area {
   width: 60% !important;
   display: flex;
   align-items: center;
 }
-.qa-form .cerify-code-panel .verify-code-area .verify-input-area {
+.qa-form .cerify-code-panel .verify-code-area .verify-input-area, .contact-form .cerify-code-panel .verify-code-area .verify-input-area {
   flex-grow: 1;
   height: 100%;
 }
-.qa-form .varify-input-code {
+.qa-form .varify-input-code, .contact-form .varify-input-code {
   height: auto;
 }
-.qa-form .verify-change-code {
+.qa-form .verify-change-code, .contact-form .verify-change-code {
   color: red;
 }
-.qa-form .submit-btn {
-  padding: 10px 20px;
+.qa-form .submit-btn, .contact-form .submit-btn {
+  padding: 10px 28px;
   display: block;
   margin: 0 auto;
   color: #ffffff;
@@ -911,15 +911,16 @@ footer .photonic a {
   outline: none;
   transition: all 0.4s ease-in-out;
 }
-.qa-form .submit-btn:hover {
+.qa-form .submit-btn:hover, .contact-form .submit-btn:hover {
   background-color: #ffffff;
-  border: 1px solid #364664;
+  outline: 1px solid #364664;
   color: #364664;
 }
 
 .contact-container {
   z-index: 1;
-  padding: 65px 0;
+  padding-top: 65px;
+  padding-bottom: 32px;
   background-color: #F3F4F6;
   margin-top: 48px;
 }
@@ -931,6 +932,9 @@ footer .photonic a {
 .contact-container .zhonghe, .contact-container .sanchong {
   padding: 12px 24px;
   border: 1px solid #364664;
+}
+.contact-container a:hover {
+  color: #364664;
 }
 
 .branch-box {
@@ -944,4 +948,16 @@ footer .photonic a {
   .branch-box ul {
     width: 48%;
   }
+}
+
+.map-container {
+  position: relative;
+  padding-bottom: 25%;
+}
+.map-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
 }/*# sourceMappingURL=all.css.map */

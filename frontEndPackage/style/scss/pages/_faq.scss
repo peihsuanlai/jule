@@ -56,7 +56,7 @@
     transform: translateY(-50%) rotate(-90deg);
 }
 
-.qa-form {
+.qa-form, .contact-form {
     select {
         padding: 0;
     }
@@ -87,7 +87,7 @@
         color: red;
     }
     .submit-btn {
-        @include padding(10px, 20px);
+        @include padding(10px, 28px);
         display: block;
         margin: 0 auto;
         color: $white;
@@ -97,7 +97,7 @@
         transition: all 0.4s ease-in-out;
         &:hover {
             background-color: $white;
-            border: 1px solid $main;
+            outline: 1px solid $main;
             color: $main;
         }
     }
