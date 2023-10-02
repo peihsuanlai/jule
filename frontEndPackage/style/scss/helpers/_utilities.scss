@@ -10,6 +10,10 @@
     background-color: $main;
 }
 
+.text-sub{
+    color: $sub;
+}
+
 .text-main{
     color: $main;
 }
@@ -42,3 +46,14 @@
     font-size: 32px;
 }
 
+.mb-20{
+    margin-bottom: 20px;
+}
+
+.mb-32{
+    margin-bottom: 32px;
+}
+
+.py-60{
+    padding: 60px 0;
+}

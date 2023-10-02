@@ -1,0 +1,104 @@
+.qa-container {
+    z-index: 1;
+    @include padding(65px, 0);
+    background-color: $bg-gray;
+    margin-top: 48px;
+    @include medium {
+        margin-top: 60px;
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        background-image: url("/frontEndPackage/images/center-logo.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        height: 50%;
+    }
+}
+
+
+.qa-accordion {
+    a {
+        color: $dark-text;
+    }
+    .card {
+        background-color: transparent;
+        border: 0;
+    }
+    .card-header {
+        background-color: transparent;
+    }
+    .card-body {
+        line-height: 2;
+    }
+    .question-number {
+        @include padding(12px, 8px);
+        background-color: $sub;
+        border-radius: 50%;
+    }
+    .control-icon {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform 0.3s;
+    }
+}
+
+
+
+
+.question-btn:not(.collapsed) .control-icon {
+    transform: translateY(-50%) rotate(-90deg);
+}
+
+.qa-form {
+    select {
+        padding: 0;
+    }
+    .cerify-code-panel {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .cerify-code-panel .verify-code {
+        margin-bottom: 0;
+        border: 0;
+        width: 35% !important;
+    }
+    .cerify-code-panel .verify-code-area {
+        width: 60% !important;
+        display: flex;
+        align-items: center;
+    }
+    .cerify-code-panel .verify-code-area .verify-input-area {
+        flex-grow: 1;
+        height: 100%;
+    }
+    .varify-input-code {
+        height: auto;
+    }
+    .verify-change-code {
+        color: red;
+    }
+    .submit-btn {
+        @include padding(10px, 20px);
+        display: block;
+        margin: 0 auto;
+        color: $white;
+        background-color: $main;
+        border: none;
+        outline: none;
+        transition: all 0.4s ease-in-out;
+        &:hover {
+            background-color: $white;
+            border: 1px solid $main;
+            color: $main;
+        }
+    }
+}

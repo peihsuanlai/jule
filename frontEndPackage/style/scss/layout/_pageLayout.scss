@@ -1,0 +1,82 @@
+.dot-img {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 20%;
+}
+
+.breadcrumb {
+    background-color: transparent;
+    a {
+        color: $light-text;
+        &:hover {
+            color: $sub;
+        }
+    }
+    .breadcrumb-item + .breadcrumb-item::before {
+        content: ">";
+    }
+}
+
+.triangle-sm {
+    position: absolute;
+    left: 0;
+    top: 25%;
+    border: 1px solid #e6e1dd;
+    border-color: transparent transparent transparent #e6e1dd;
+    border-width: 50px;
+}
+
+.triangle-lg {
+    position: absolute;
+    right: 0;
+    top: 20%;
+    border: 1px solid #d7dae0;
+    border-color: transparent #d7dae0 transparent transparent;
+    border-width: 100px;
+}
+
+
+//側邊icon
+.side-icons {
+    position: fixed;
+    z-index: 2;
+    right: 15px;
+    bottom: 12%;
+    a,
+    a:hover {
+        color: $white;
+    }
+    .up-icon {
+        background-color: $sub;
+        font-size: 20px;
+        @include padding(16px, 22px);
+        border-radius: 50%;
+        animation: 2s arrowTop ease-out infinite;
+    }
+    .line-icon {
+        background-color: #17dc13;
+        font-size: 24px;
+        @include padding(12px, 18px);
+        border-radius: 50%;
+    }
+}
+
+@keyframes arrowTop {
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20%);
+    }
+
+    60% {
+        transform: translateY(-10%);
+    }
+}

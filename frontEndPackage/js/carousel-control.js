@@ -38,7 +38,7 @@ $(function () {
       
         autoplay: true,
         slideTransition: "linear",
-        autoplaySpeed: 6000,
+        autoplaySpeed: 9000,
         autoplayHoverPause: false,
         loop: true,
         dots: false,

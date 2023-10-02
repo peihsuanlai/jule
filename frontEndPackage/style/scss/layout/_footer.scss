@@ -1,0 +1,93 @@
+.footer-banner a {
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 45%;
+    width: 100%;
+    opacity: 1;
+    transition: opacity 0.4s ease;
+    &:hover {
+        opacity: 0.7;
+    }
+    @include small {
+        padding-bottom: 35%;
+    }
+    @include medium {
+        width: 50%;
+        padding-bottom: 20%;
+    }
+    .content {
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include xlarge {
+            width: 50%;
+            left: 70%;
+        }
+    }
+    h3 {
+        @include small {
+            font-size: 32px;
+        }
+    }
+    h3,
+    p {
+        @include large {
+            letter-spacing: 2px;
+        }
+    }
+}
+
+footer {
+    padding-top: 55px;
+    padding-bottom: 16px;
+    .footer-logo {
+        z-index: 1;
+        img {
+            width: 200px;
+            @include large {
+                width: initial;
+            }
+        }
+    }
+    .footer-logo::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: #aeaeae;
+        top: 26px;
+        z-index: -1;
+    }
+    .detail > div {
+        width: 85%;
+        @include small {
+            width: 48%;
+        }
+        @include large {
+            width: auto;
+        }
+    }
+    .detail div:last-child {
+        @include small {
+            width: 100%;
+        }
+        @include large {
+            width: auto;
+        }
+    }
+    li {
+        line-height: 1.2;
+    }
+    a,
+    a:hover {
+        color: white;
+    }
+    .photonic,
+    .photonic span,
+    .photonic a {
+        color: #000000;
+        opacity: 0.6;
+    }
+}

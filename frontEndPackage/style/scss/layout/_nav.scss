@@ -1,0 +1,105 @@
+
+//首頁nav
+#home-nav-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    &.bg-white {
+        background-color: $white;
+        box-shadow: 0 0 15px 0 rgba(0,0,0,10%);
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: $main;
+    }
+}
+
+//其他頁nav
+.nav-container {
+    background-color: $white;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,10%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: $main;
+    }
+    .active{
+        color: $sub;
+    }
+}
+
+//手機版icon控制
+.menu-icon,
+.close-icon {
+    font-size: 20px;
+
+    @include xsmall {
+        font-size: 25px;
+    }
+    @include small {
+        font-size: 30px;
+    }
+    @include medium {
+        font-size: 35px;
+    }
+}
+
+.navbar-nav a:hover {
+    color: $main;
+}
+
+//桌機版 hover
+.nav-item {
+    &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        left: 0;
+        background-color: $main;
+        height: 2px;
+        transition: width 0.4s;
+    }
+    &:hover::after {
+        width: 100%;
+    }
+}
+//手機版menu
+.mobile-menu.show,
+.mobile-menu.collapsing {
+    width: initial;
+    max-width: initial;
+    height: 100vh;
+    background: $main;
+    .navbar-nav a {
+        color: $white;
+    }
+    .nav-item {
+        &::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $white;
+            height: 2px;
+            transition: width 0.4s;
+        }
+        &:hover::after {
+            width: 70px;
+        }
+    }
+}
+
+
